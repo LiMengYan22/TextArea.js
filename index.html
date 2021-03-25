@@ -1,0 +1,17 @@
+<!-- 
+Finalmente, antes de enviar los datos, para ser guardados con formato, deben cargar el TextArea justo antes de hacer el "Submit" del formulario:
+-->
+<script src="http://js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script>
+<script type="text/javascript">bkLib.onDomLoaded(function() { new nicEditor().panelInstance('textarea1'); });</script>
+<script languaje="javascript">
+function Ok()
+{
+nicEditors.findEditor('textarea1').saveContent();
+document.formname.submit();
+}
+</script>
+<!-- El Formulario: -->
+<form name="formname" action="pagqueguarda.php">
+         <textarea name="textarea1">CODE.. </textarea>
+         <input type="button" onClick = "Ok();">
+</form>
